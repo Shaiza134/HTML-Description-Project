@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset = "utf-8">
+<title>HTML Fundamentals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class='nav'>
+<div class='container'>
+<a href="/Lesson3.html" class='logo'><span id="logo-1-letter">K</span>hurram <span id="logo-1-letter">T</span>utorial
+<ul>
+<li><a href="#" class="active">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</nav>
+<article class="content">
+<section class="container content">
+<h1>Chapter 1: Introduction</h1>
+
+<p>In this page I would discuss briefly all the concepts related to different tags in <dfn = "Hyper Text Mark Up Language"><abbr>HTML 5</abbr></dfn> according to latest standard. We would understand how semantics are important to consider than the mere presentation of content on the page.</p>
+<ul> 
+<li>To learn semantics behind many HTML5 tags</li>
+<li>Separation of concern between content and presentation.</li>
+<li>Focus on structure, semantics , technical details of HTML5 and CSS3.</li>
+<li>To discuss things in developer perspective as oppose to designer perspective</li>
+</ul>
+<hr>
+   
+<h1>Chapter 2: HTML 5 Tags Relating Paragraph and text</h1>
+
+<p>Now  we would learn different<abbr> HTML5</abbr> tags one by one and mention
+  their technical details. </p> 
+    
+  <p>Note:This description of tags is taken from the latest HTML5 standard published
+    by w3c. To check it your self go to the following link.</p>
+ <br>   
+  <a href="https://html.spec.whatwg.org/multipage/">Living Standard — Last Updated 17 June 2022</a>
+<br>
+ <p> Lets start our discussion on different tags</p>
+    
+<h2>The <code>&lt;html&gt;</code>Element</h2>
+
+ <p>  It is a root of a Html document.html element should also specify lang attribute to aid speech synthesis tools etc.</p>
+
+<!-- **************html element finished************* -->
+
+
+<h2>The <code>&lt;head&gt;</code>Element</h2>
+
+<p><code>&lt;head&gt;</code> element represents collection of meta data.&lt;head &gt could be small or big depending upon the amount 
+the amount of metas such as <code>&lt;title &gt;</code>, <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>,<code> &lt;link &gt</code>, <code>&lt;meta name=&quot; &quot; 
+content=&quot; &quot;&gt;</code>.</p>
+ 
+<!--**************head element finished*************--> 
+
+
+<h2>The <code>&lt;title&gt;</code>Element</h2>
+  
+<p>Describes document title or name. &lt;title &gt;element identifies documents even if it's used out of context. It can be and 
+should be different from its first heading. There should be no more than one title element per page.</p>
+
+<!--**************title element finished*************-->
+
+<h2>The <code>&lt;link&gt;</code>Element:</h2>
+
+<p>link element links the page with external resource.&quot;href&quot; attribute specifies the destination of the link.It must be present and 
+valid URL.&quot;rel&quot; attribute specifies the relationship. In this case the relationship is that its a style sheet for this file. <code>&quot;rel&quot;</code> attribute should be a valid token
+e.g. &quot;stylesheet&quot;. Type attribute gives a MIME type of a linked resource.</p>
+
+<div class="example">
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;
+media=&quot;screen&quot; &gt;</code></pre>
+</div>
+
+<!--**************link element finished*************--> 
+
+<h2>The <code>&lt;meta&gt;</code> Element:</h2>
+
+<p>Represents exra information about the page such as characterset, name of authors, keywords, last
+modified etc. &quot;charset&quot;attribute gives the information about character encoding used by the
+document.</p>
+
+<pre><code>&lt;meta charset=&quot;utf-8&quot; &gt;</code></pre>
+There must be not than more than one meta element with a 
+&quot;charset&quot; attribute per page.
+
+<p class="note">Restrictions on user scalability such as zooming in or out is not appreciated in Html5. For example 
+the statement  
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no&quot;&gt;</code></pre>
+is not used any more.Browsers allow user to zoom-in regardless of that restriction, so counterproductive in <abbr>HTML5</abbr>.</p>
+
+<p>meta element sometime has name-value pairs. Where name describes aspect of metadata and content is actual
+value. eg.</p>
+
+<pre><code>&lt;meta name=&quot;keywords&quot; content=&quot;HtML, CSS, XML, Javascript&quot;&gt;</code></pre>
+
+
+<!--**************meta element finished*************-->
+
+<h2>The <code>&lt;style&gt;</code> Element:</h2>
+
+<p>It allows embed styling info into the documents. It is one of the several inputs to the styling processing model.</p>
+
+<p>Style doesn't represent content for use. &quot;type&quot; attribute shows internet media type also called MIME type of the &lt;style &gt;.
+If &quot;type&quot; attribute is not mentioned in style tag then the default value of type attribute used is &quot;text/css&quot;.
+charset parameter with the type should not be given. &quot;media&quot; attribute tells us what media/device the media resource is optimised
+for.</p>
+
+<p class="Note">Style should prefrebbly be used in the body of &lt;head&gt; element between opening and closing head tags. In the body it may cause 
+unwanted restyling.</p>
+
+<div class="example">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot&gt;
+h1 {color:red;}
+h2{color:blue;}
+&lt;/style &gt;
+ ..
+  ...
+   .....
+
+&lt;/head&gt;
+&lt;body&gt;.................. .   .  . &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>   
+  
+<!--**************style element finished*************--> 
+
+<h2>Meaning of Paragraph! in  <abbr>HTML5</abbr> context:</h2>
+
+<p>Typically a paragraph is run of phrasing content. It normally forms a block of text(with one or more sentences)
+.Paragraph discusses a particular topic. It is also used for general thematic grouping.&lt;a&gt;, &lt;ins&gt;, &lt;del&gt;
+can straddle the boundaries of paragraph, which is not very likable.&lt;p&gt; element is used for explicit paragraphing, but 
+pragraph are more than just the definition of &lt;p&gt; element.</p>
+
+<!-- **************Paragraph finished***************** -->
+
+<h2>The <code>&lt;p&gt;</code> Element</h2>
+
+<p>As mentioned before it is used for explicit wrapping of paragraph.For example</p>
+
+<div class="example">
+<pre><code>&lt;p&gt; The little kitten is very cute. I really really like her. She sit's on mat, 
+like 'cat on a mat'.&lt;/p&gt;</code></pre></div>
+
+<p>Different labels in a form, which describe single thing are enclosed in a single paragraph.For example</p>
+
+<div class="example">
+<pre><code>&lt;fieldset&gt;
+&lt;legend&gt;Personal Information&lt;/legend&gt;
+&lt;p&gt;
+&lt;lable&gt;Name:&lt;input name=&quot;n&quot;&gt;&lt;/lable& type=&quot;text&quotgt; 
+&lt;lable&gt;Name:&lt;input name=&quot;onion&quot type=&quot;checkbox&quot;&gt;
+Hide from users
+&lt;/lable&gt;
+&lt;/p&gt;</code></pre></div> 
+
+
+<p>Each stanza of the poem is taken as one paragraph in poem, and by convention every verse is seperated from another by 
+<code>&lt;br&gt;</code> element. See the example below</p>
+
+<div class="example">
+<pre><code>&lt;p&gt; 
+There's was once an example from finley&lt;br&gt;
+Whose markup was dubious quality&lt;br&gt;
+The validator complained&lt;br&gt;
+so the author was pained&lt;br&gt;
+&lt;/p&gt;</code></pre></div>
+
+
+<p class="note">List elements(ol,ul) cannot be a children of <code>&lt;p&gt;</code> element. Take caution when sentence contain a bulleted list.</p>
+
+<!--**************p element finished*****************--> 
+
+<h2>The <code>&lt;a&gt;</code> Element:</h2>
+
+<p><code>&lt;a&gt;</code>tag with &quot;href&quot; attribute represents hypertext anchor.Without "href" attribute it represents a placeholder.
+We use anchor tag to create hyper link in our document.There are two main types of anchor tag.One which contain absolute URLs and
+the second with the relative URLs. Lets see the example of both below.</p>
+
+<h4>Absolute URL's:</h4>
+<pre><code>&lt;p&gt; &lt;a href=&quot;www.google.com&quot;&gtTo Google&lt;/a&gt;&lt;/p&gt; </code></pre>
+
+<h4>Relative URL's:</h4>
+<ul>
+<li><p>If the file is in the same folder:</p>
+<pre><code>&lt;p&gt;&lt;a href=&quot;a.gif&quot;&gtSame directory&lt;/a&gt;&lt;/p&gt;</code></pre></li></p>
+
+<li><p>If the file is in sub folder:</p>
+<pre><code>&lt;p&gt; &lt;a href=&quot;images/a.gif&quot;&gtTo the file in Subdirectory called images&lt;/a&gt;
+&lt;/p&gt;</code></pre></li>
+
+<li><p>If the file is in parrent folder:</p>
+<pre><code>&lt;p&gt; &lt;a href=&quot;../a.gif&quot;&gt;To the file in parrent directory&lt;/a&gt;&lt;/p&gt;</code></pre></li>
+
+<li><p>If the file is in images folder in parrent directory:</p>
+<pre><code>&lt;p&gt; &lt;a href=&quot;../images/a.gif&quot;&gt;To the file in parrent's directory image folder&lt;/a&gt;
+&lt;/p&gt;</code></pre></li>
+
+<li><p>If the file is in parent's parent directroy images folder:</p>
+<pre><code>&lt;p&gt; &lt;a href=&quot;../../images/a.gif&quot;&gt;To the file in parrent's parrentdirectory 
+image folder&lt;/a&gt;&lt;/p&gt;</code></pre></li>
+</ul>
+
+<h3>Using target attribute</h3>
+<p>If you want browser to open a hyperlink in separate instance or window. You can use <b>target</b> attribute as fallows:</p>
+<pre><code>&lt;p&gt;&lt;a href=&quot;www.google.com&quot; target=&quot;_blank&quot;&gtTo the file in Subdirectory called images&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+
+<h3>Using named anchor</h3>
+
+<p>lets see an example below for better understanding</p>
+
+<div class="example">
+<pre><code>&lt;p&gt;&lt;a href=&quot;&#35;bottom&quot;&gtTo Bottom&lt;/a&gt;&lt;/p&gt;
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+&lt;h1&gt;I'm at the bottom&lt;/h1&gt;
+&lt;a name=&quot;bottom&quot;&gt;</code></pre></div>
+
+<p>The name on the top and bottom should be similar</p>
+
+<h3>Why relative paths?</h3>
+
+<p>You might have a question in mind why to not to use absolute paths all the time? when relative urls can 
+get convoluted very quickly.The answer is that if the website should ever move, you simply need to keep
+the relative directly structure the same at the new server.Relative to the directory structure the same
+refrence are still valid in that case.</p>
+
+<p> You might think you might never need that but if you need to move the locally developed site onto
+remote server, you would quickly appreciate the importance of relative paths.
+</p>
+
+<!-- **************a element finished***************** -->
+
+<h2>The <code>&lt;strong&gt;</code> Element:</h2>
+
+<p>Represents strong importance, seriousness or urgency for its content. It can be used in heading, caption
+or paragraph to distinguish important part from a boiler plate.</p>
+
+<p>Also used for warning or caution.Sometime the element is used for urgency, where the authors wants to draw
+attention sooner than other parts.</p>
+
+<div class="example">
+<pre><code>&lt;h1&gt;&lt;strong&gt;Flowers, Bees and Honey &lt;/strong&gt; and other things i dont understand.&lt;/h1gt;  
+&lt;p&gt;&lt;strong&gt;Warning.&lt;/strong&gt;<br>
+This dungeon is dangerous
+&lt;p&gt;</code></pre></div>
+
+<!-- **************strong element finished***************** -->
+
+<h2>The <code>&lt;em&gt;</code> Element:</h2>
+
+<p>Indicates stress emphasis of its content. level of stress could be increased through multiple nested 
+&lt;em&gt; elements. Placement of stress changes the meaning of the sentence.</p>
+
+<div class="example">
+<pre><code>&lt;p&gt;Cats are cute animal&lt;/p&gt;<br>
+&lt;p&gt;&lt;em&gt;<mark>Cats</mark>&lt;/em&gt; are cute animals.&lt;/p&gt;
+In question the kind of animal unders discussion.
+&lt;p&gt;Cats&lt;em&gt;<mark> are</mark>&lt;/em&gt; cute animals.&lt;/p&gt; 
+Truth of the whole sentence in question.</code></pre></div>
+
+In similar way changing the place of stress emphasis of each word of the 
+sentence would change the meaning.
+
+
+
+<!-- **************em element finished***************** -->
+
+<h2>The <code>&lt;small&gt;</code> Element:</h2>
+
+<p>&lt;small&gt; element represents side comments such as small print. It typically features disclaimmers,
+caveats, legal restrictions, or copyrights(also normally used for copyright declaration of the web page in
+the footer).Also used for attribution, or satisfying licensing requirements.</p>
+
+<p class="Note">Do not use &lt;small&gt; to de-emphasize the &lt;em&gt;.
+It should not be used for extended spans of text,only intended for short run of text.</p>
+
+<p class="Note">It's suitable for text of a page listing terms of use, in that case not a side comment,main content.It is
+also different from the side bar, which might be multiple paragraph removed from the main flow of the text</p>
+
+<div class="example">
+<pre><code>&lt;dl&gt;&lt;dt&gt;Single room&lt;dd&gt;199&euro;<!--also &#8364;-->
+&lt;small&gt;Breakfast included,VAT not included.&lt;/small&gt;&lt;/dl&gt;</code></pre></div>
+
+<!-- **************small element finished***************** -->
+
+<h2>The <code>&lt;s&gt;</code> Element:</h2>
+
+<p>&lt;<dfn title="Strike through element">s</dfn>&gt; element designates a content as being no longer accurate or relevant.
+&lt;s&gt; is not appropriate for document edit,&lt;del&gt; should be used for text being removed.</p>
+
+<div class="example">
+<pre><code>&lt;p&gt;Buy our Iced Tea and Lemonade.&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;Recommended retail price 3.99&#36 per bottle&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New selling for just 2.99&#36 per bottle!&lt;/srong&gt;&lt;/p&gt;</code></pre>
+</div>
+<!-- **************s element finished***************** -->
+
+<h2>The <code>&lt;cite&gt;</code> Element:</h2>
+
+<p>&lt;<dfn title="Cite element">cite</dfn>&gt; represents refrence to a creative work.Must include the title of the work or the
+name of the author(person, people or organisation), or a url refrence, or a reference
+in a abbreviated form or a author of a quote refrenced using <code>&lt;cite&gt;</code>element.</p>
+
+<div class="example">
+<pre><code>In the words of &lt;cite&gt;Charles Bukowski&lt;/cite&gt;
+&lt;q&gt;An intellectual says a simple thing in a hardway.An artist says a hard thing
+in a simple way&lt;q&gt;&lt;p&gt;
+</code></pre></div>
+
+<!-- **************s element finished***************** -->
+
+<h2>The <code>&lt;q&gt;</code> Element:</h2>
+
+<p>&lt;<dfn title="Quote element">q</dfn>&gt; represents phrasing content quoted from another source. 
+Quotation punctuation(quotation marks are inserted through rendering of the browser so must not  
+be added explicitly.It also must not be used as a replacement of quotation marks, which in essence 
+doesn't represent quotes i.e. sarcastic statements.Notice the correct use of quotation marks below instead
+of quote element.</p> 
+
+<div class="example">
+<pre><code>&lt;p&gt;The word &quot;ineffable&quot; would have been used to describe the disaster 
+resulting from the compaign's management.&lt;/p&gt;</code></pre></div>
+
+<div class="example">
+<pre><code>&lt;p&gt;w3c mission is &lt;q cite=&quot;https://www.w3.org/consortium/&quot;&gt;To lead
+the world wide web to its full potential by developing protocols and guidelines that ensure
+long-term growth for the web.&lt;/q&gt; </code></pre></div>
+
+<!-- **************q element finished***************** -->
+
+<h2>The <code>&lt;abbr&gt;</code> Element:</h2>
+
+<p>&lt;<dfn><abbr title="Abbreviation element">abbr</abbr></dfn>&gt; element represents an abbreviation or acronym, 
+Optionally with its expansion ofthe abbreviation. &quot;title&quot;attribute may be used to provide an 
+expansion of the abbreviation.The attribute if specified must contain the expansion of the abbreviation and 
+nothing else.</p>
+
+<div class="example">
+<pre><code>&lt;p&gt; &lt;dfn id=&quot;whatwg&quot;&gt;
+&lt;abbr title=&quot;Web Hypertext Application Working Group&quot;&gt;WHATWG&lt;/abbr&gt;
+&lt;/dfn&gt; is a loose unofficial collaboration of web browser...........&lt;p&gt; 
+</code></pre></div>
+
+<p class="note">abbr could also be used without expansion as a hook for styles.If an abbreviation is pularized
+the expansion should be pularized and vice virsa.</p>
+
+<pre><code>&lt;abbr title=&quot;Web Hypertext Application Working Group<strong>s</strong>&quot;&gt;
+WHATWG<strong>s</strong>&lt;/abbr&gt;</code></pre>
+
+
+<!-- **************abbr element finished***************** -->
+
+<h2>The <code>&lt;dfn&gt;</code> Element:</h2>
+
+<p>The &lt;<dfn title="Defination element">dfn</dfn>&gt; element represents (first) defining instance of a term. 
+The term description(<code>&lt;p&gt;</code>,<code>&lt;li&gt;</code>,<code>&lt;section&gt;</code>) that is nearest 
+ancestor of dfnelement must contain the defination of the term given by element.</p>
+
+<p>If the dfn element has a title attribute, then the exact value of dfn is the value of the title attribute. In an other case if  'dfn' 
+contains only one child and that child is <code>&lt;abbr&gt;</code> element with the <strong>title</strong> attribute, then the value of title 
+attribute in  <code>&lt;abbr&gt;</code> is the definition term of the dfn element. Last but not the least if the &lt;dfn&gt; has just the text content
+then that content is the definition value of  <code>&lt;dfn&gt;</code> element. Below are some examples to elaborate that concept</p>
+
+<p>Case1: <code>&lt;dfn&gt;</code> with &quot;title&quot; attribute of <code>&lt;abbr&gt;</code> element:</p>
+
+<div class="example">
+<pre><code>&lt;p&gt; The &lt;dfn&gt;&lt;abbr titile=&quot;Garage door opener&quot;&gt;GDO&lt;/abbr&gt;&lt;/dfn&gt;
+is a device that allows off world teams to open the iris.&lt;p&gt;
+. . . .   
+. . . .  
+. . . .
+&lt;p&gt;Teal activated his &lt;abbr title=&quot;Garage door opener&quot;&gt;GDO&lt;/abbr&gt; and so Hammond
+ordered this iris to be opened.&lt;p&gt;</pre></code></div>
+
+<p>Case2:<code>&lt;dfn&gt;</code> without &quot;title&quot; attribute, with just the text content.</p>
+
+<pre><code>&lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; is the standard Markup language for 
+creating web pages.&lt;p&gt;</code></pre>
+
+<p>Case3:<code>&lt;dfn&gt;</code> with &quot;title&quot; attribute.</p>
+
+<pre><code>&lt;p&gt;&lt;dfn title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/dfn&gt;is the 
+standard markup languagefor creating web pages.&lt;/p&gt;</pre></code>
+
+<p>In nutshell &lt;dfn&gt; marks up term being defined and expect nearest ancestor such as <code>&lt;p&gt;</code> to contain the defination of it.
+Also it should be done at the first occurance of the term on a page. One of the advantages is that as you hover your mouse over the
+term you would see the definition value pop up.</p>
+
+<!-- **************dfn element finished***************** -->
+
+<h2>The <code>&lt;data&gt;</code> Element:</h2>
+
+<p>&lt;<dfn title="Data element">data</dfn>&gt represents its content along with machine-readable form.So in other words it helps to gives
+ two representation of the given value one that is easy for machine to understand i.e. for data processers etc and the other which is 
+easy for humans to grasp and is rendered in browser.</p>
+
+<p class="note">The machine-readable form of value is mostly presented in the value attribute of data element. 
+The value attribute must be present. Its value must be the representation of the elements content in machine readable formatt.</p>
+
+<p>When the value is date or time related, the more specific &lt;time&dt; element can be used instead.</p>
+
+<p>The Element can also be used in conjuction with scripts in the page, for which a script has a literal value to store
+along side a human-readable value.</p>
+
+<pre><code>&lt;p&gt;&lt;data value=&quot;21305&quot;&gt;Cherry Tomato&lt;/data&gt;&lt;/p&gt;</code></pre>
+
+<!-- **************dfn element finished***************** -->
+
+<h2>The <code>&lt;time&gt;</code> Element:</h2>
+
+<p>&lt;<dfn><abbr title="Time elment">time</dfn>&gt; represents its content, along with machine readable form of those
+contents in the datetime attribute.In other words it represents it content and the machine readable representation
+of it, in datetime attribute.</p>
+
+<p>The kind of content is limited to various kinds of date, time-zone offsets and durations.</p>
+<p>The &quot;datetime&quot; value of &lt;time&gt; element is the value of the datetime 
+content attribute, if it has one,otherwise the child text content of the <code>&lt;time&gt;</code> element.Lets 
+see the example below to understand what we mean by that</p>
+
+<p>Case1:no datetime attribute so the child content the value of <code>&lt;time&gt;</code> element.</p>
+
+<pre><code>&lt;time&gt;2018-10-06&lt;/time&gt;</code></pre>
+
+<p>Case2:&lt;time&gt; with <strong>datetime</strong> attribute</p>
+
+<pre><code>&lt;time datetime=&quot;2018-10-06&quot;&gt;October 6, 2018(it could be any value, 
+code would not bother)&lt;/time&gt;</code></pre>
+
+<p>The syntax of datetime value is<br>
+<br>
+   YYYY-MM-DD<br>
+</p>
+
+<ul>
+
+<li>could be uptill month only e.g.
+
+  <pre><code>&lt;time&gt;2011-11&lt;/time&gt;</code></pre>
+
+</li>
+
+<li>could be from month to day e.g.
+
+  <pre><code>&lt;time&gt;11-18&lt;/time&gt;</code></pre>
+
+</li>
+
+<li>could be on itself only date or year or month</li>
+
+</ul>
+
+<p>A valid global date and time string formatt is as fallows</p>
+
+<pre><code>YYYY-MM-DDT/[space]hh:mm:ss[timeoffset]</code></pre>  
+
+<p>In the above global time string. T/[sapce] means that we can use any one of it. It can either be a captial T or a space.  
+ Below is the example of global time string</p>
+
+<pre><code>&lt;time&gt;2011-11-18T  06:54-08:00&lt;/time&gt;</code></pre>
+
+<p>Valid week string(it shows 47th week of 2011)</p>
+
+<pre><code>&lt;time&gt;2011-w47&lt;/time&gt;</code></pre>
+
+<p>Valid Duration strings</p>
+
+<ul><li>
+<pre><code>&lt;time&gt;PT4H18M3S&lt;/time&gt;</code></pre>
+</li>
+<li><pre><code>&lt;time&gt;4h 18m 3s&lt;/time&gt;</code></pre>
+</li>
+</ul>
+
+<div class="example">
+<pre><code>&lt;span class=&quot;summary&quot;&gt;Web 2.0 conference&lt;/span&gt;
+&lt;time time=&quot;dstart&quot; datetime=&quot;2005-10-05&gt;
+October5&lt;/time&gt;
+. . . .
+. . . .
+. . . .
+&lt;time class=&quot;dtend&quot; datetime=&quot;2005-10-07&quot;&gt;
+7&lt;/time&gt;at the &lt;span class=&quot;location&quot;&gt;Argent
+Hotel,Sanfrancisco CA&lt;/span&gt;</code></pre></div> 
+
+<!-- **************dfn element finished***************** -->
+
+<h2>The <code>&lt;code&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Code element">code</dfn>&gt; represents a fragment of a computer
+code.</p>
+
+<p>This could be XML element name,a computer program,or any other string that
+a computer would recognise.There is no formal way to indicate the language of
+computer code being marked. Authors who might want to specify language can
+use class attribute.e.g.</p>
+
+<pre><code>&lt;p&gt;when you can call the &lt;code&gt;activate()&lt;/code&gt;
+method&lt;p&gt;</code></pre>
+
+<p class="note">Block of code could be marked up using the <strong>pre</strong>
+<!--I can use strong with pre like this as it is to draw attention and
+to separate boiler plate from the important text.  --->
+and <strong>code</strong> elements.</p> 
+
+<p>See the example below.</p>
+
+<div class="example">
+<pre><code>&lt;pre&gt;&lt;code class=&quot;language-pascal&quot;&gt;
+var 2: Integer;
+begin
+   i = 1;
+end
+&lt;/code&gt;&lt;/pre&gt;</code></pre></div>
+
+<!-- **************Code element finished***************** -->
+
+<h2>The <code>&lt;var&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Variable element">var</dfn>&gt;represents a variable. It could 
+be actual variable in mathematical expression or the variable in programming 
+context.It could also be a idenfier representing a constant or a symbol identifying
+the physical quantity , or a function parameter or just be a term use as the 
+placeholder in a prose. See the examples below:</p>
+
+<pre><code>&lt;p&gt;if there are &lt;var&gt;n&lt;/var&gt; pipes leading to 
+the building.&lt;p&gt;</code></pre>
+
+<p note="note">For mathematics, in particular beyond simplest expression, MathML is more
+appropriate.We can use MathML in actual expression but <code>&lt;var&gt;</code> could be
+used to refrence them latter in legend or figure etc.</p>
+
+<pre><code>&lt;var&gt;E&lt;/var&gt; = &lt;var&gt;m&lt;/var&gt;&lt;var&gt;c&lt;/var&gt;
+&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+
+<!-- **************var element finished***************** -->
+
+<h2>The <code>&lt;samp&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Sample element">samp</dfn>&gt; represents the sample or quoted output
+from another program or computing system.</p>
+
+<p>Inline example of <code>&lt;samp&gt;</code> element:</p>
+
+<pre><code>&lt;p&gt;The computer said &lt;samp&gt;Two much cheese in Tray two&lt;/samp&gt;
+but i didn't know what it meant.&lt;p&gt;</code></pre>
+
+<p>Block of sample output example. Nested <code>&lt;samp&gt;</code> or <code>&lt;kbd&gt;</code> 
+allow for the styling of specific elements of the sample output using stylesheets.</p>
+
+<div class="example">
+<pre><code>&lt;samp&gt;&lt;span class=&quot;prompt&quot;&gt;Jdoe@mownow:~$&lt;/span&gt;
+&lt;kbd&gt;ssh demo.example.com&lt;/kbd&gt;
+      east login:Tues April 12
+       09:10:17 2005 from
+      - - - - - - - - - -
+      - - - - - - - - - -
+&lt;/samp&gt;&lt;/pre&gt;</code></pre></div>
+
+<!-- **************samp element finished***************** -->
+
+<h2>The <code>&lt;kbd&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Keyboard element">kbd</dfn>&gt; represents user input (typically keyboard
+input, although it may also be used to represent other input,such as voice commands).</p>
+
+<p>when the <code>&lt;kbd&gt;</code> element is nested inside a <code>&lt;samp&gt;</code> element, 
+it represents the input as it was echoed by the system.</p>
+
+<p>when the <code>&lt;kbd&gt;</code> element contains a <code>&lt;samp&gt;</code> element, it 
+represents input based on system output.</p>
+
+<p>when the <code>&lt;kbd&gt;</code> element is nested inside another <code>&lt;kbd&gt;</code> 
+element, it represents an actual key or other single unit of input.</p>
+
+<p>See the example below for more clear understanding.</p>
+
+<div class="example">
+<pre><code>&lt;p&gt; to make George eat an apple, press
+&lt;kbd&gt;&lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;f3&lt;/kbd&gt;
+&lt;/kbd&gt;&lt;/p&gt;</code></pre></div>
+
+<!-- **************kbd element finished***************** -->
+
+<h2>The <code>&lt;b&gt;</code> Element</h2>
+
+<p>&lt;b&gt; represents a span of text to which attention is drawn
+for utilitarian purposes</p>
+<ol>
+<li>without conveying any extra information</li>
+<li>no implication or alternative voice or mood</li>
+</ol>
+<p>Such as keywords in document abstract, product names in a review, actionable words in interactive
+text-driven software or an article lede.</p>
+
+<p class="note">
+In other words in html5 the use of &lt;b&gt; and &lt;i&gt; is
+very limited. If you are confused, you need to remember that more often than not it would be better
+to use &lt;strong&gt; and &lt;em&gt; instead of &lt;b&gt; and 
+&lt;i&gt; elements  respectively.</p>
+
+<p>Lets see the example of the use of <code>&lt;b&gt;</code> element below</p>
+
+<div class="example">
+<pre><code>&lt;p&gt; The lt;b&gt;Frobonitor&lt;/b&gt; and &lt;b&gt;brabinator&lt;/b&gt;
+components are fired.&lt;/p&gt;</code></pre></div>
+
+<p>Authors can use &quot;class&quot; attribute on <code>&lt;b&gt;</code> element to specify the reason of use.</p>
+
+<!-- **************b element finished***************** -->
+
+<h2>The <code>&lt;i&gt;</code> Element</h2>
+
+<p>&lt;i&gt; represents a span of text in alternative voice or mood.Or otherwise
+offset from the normal prose in a manner indicating a different quality of text, such as taxonomical designations, a
+technical term, and idiomatic phrase from another language, transliteration, a thought, or a ship name in Western 
+texts.</p>
+
+<p class="note">Terms in language different from the main text should be annotated with &quot;lang&quot; attribute.</p>
+
+<p>lets have a look on the examples below</p>
+
+<div class="example">
+<pre><code>&lt;p&gt;The&lt;i class=&quot;taxonomy&quot;&gt;fellis silvester catus&lt;/i&gt; is cute&lt;/p&gt;
+
+&lt;p&gt;The term&lt;i&gt;prose content&lt;/i&gt; is identified above&lt;/p&gt;
+
+&lt;p&gt;There is a certain &lt;i lang=&quot;fr&quot;&gt;je nas sais quoi
+
+&lt;/i&gt;in the air.</code></pre></div>
+
+<!-- **************i element finished***************** -->
+
+<h2>The <code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> Element</h2>
+
+<p><code>&lt;sub&gt;</code> represents subscript and &lt;sup
+&gt; represents superscript. The element must be used only to markup typographical conventions with specific meaning, not for typographical presentation for presentation sake. For example it would be inappropriate to for the &lt;sub&gt; and &lt;sup&gt; elements to be used in name of "Lafex" document prepration system.</p>
+
+<p>In general these elements should only be used if the absence of these elements would change the meaning of the content.</p>
+
+<p class="note">
+In some languages superscripts are part of the typographical conventions for some abbreviations.</p>
+
+<div class="example">
+<pre><code>&lt;p&gt;The most beautiful women are &lt;span lang=&quot;fr&quot;&gt;&lt;abbr&gt;M&lt;sup&gt;me&lt;/sup&gt;
+&lt;/abbr&gt;Revise&lt;/span&gt;&lt;/p&gt; </code></pre></div>
+
+<p class="note">
+The <code>&lt;sub&gt;</code> element can be used inside a <code>&lt;var&gt;</code> element, 
+for variables that have subscripts</p>
+
+<!-- **************sub and sup elements finished***************** -->
+
+<h2>The &lt;u&gt; Element</h2>
+
+<p>The &lt;<dfn title="Underline element">u</dfn>&gt; represents a span of text with an unarticulated though
+explicitly rendered non-textual <strong>annotation</strong>. Such as labeling the text as being proper name in
+chinese text (a chinese proper name mark) or labeling the text as being misspelt.</p>
+
+<p class="note">
+In most cases other elements are likely to be more appropriate. In HTML5 it as very 
+limited and specific use</p>
+
+<pre><code>&lt;p&gt;This is a &lt;u&gt;parragraph&lt;/u&gt;&lt;p&gt;</code></pre>
+
+<p>Ouput of the above code is as fallows</p>
+
+Output:This is a parragraph
+
+<!-- **************************u element finished******************************** -->
+
+<h2>The <code>&lt;mark&gt;</code> Element</h2>
+
+<p>The &lt;<dfn title="Mark element">mark</dfn>&gt; represents a run of text in one document marked or highlighted 
+for reference purposes, due to its relevance in another context.</p>
+
+<p class="note">
+When used in quotation or block of text referred to from the prose , it indicates a highlight that was not
+orginally present but which has been added to bring the reader attention to a part of text that might not have been
+considered important by the orginal author.Think of this like using a highlighter pen in book to mark passages
+that you find of interest and which orginal author didn't put special attention through marking it himself.</p>
+
+<p>When used in main prose of a document it indicates a part of the document that has highlighted due to its
+likely reference to user's current activity.</p>
+
+<p>so in simple terms we use <code>&lt;mark&gt;</code> element for two main situations. One for text or passage of text which we find special fascination and want to draw particular interest of reader to it and secondly for indicating the portion of the documents content which is likely to be more relevant with user's current activity.</p>
+
+<div class="example">
+<p>Bringing attention of the user to particular part of quotation.</p>
+<pre><code>&lt;p lang=&quot;en-US&quot;&gt;Consider the following quote.&lt;/p&gt;
+&lt;blockquote lang=&quot;en-GB&quot;&gt;
+&lt;p&gt;Look arround and you will find, no-ones really &lt;mark&gt;colour&lt;/mark&gt;
+blind&lt;/p&gt;</code></pre>
+</div>
+<div class="example">
+<p>Highlighting parts of document that are matching some search string.</p>
+<pre><code>&lt;p&gt; I think, they like my garden! May be i should adopt a 
+&lt;mark&gt;kitten&lt;/mark&gt;&lt;/p&gt;
+</code></pre>
+</div>
+<div class="example">
+<p>Paragraph of text referring to specific part of the code fragment.</p>
+<pre><code>&lt;p&gt;The highlighted part is where the error lies:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vari: Interger:
+      begin
+         i:=&lt;mark&gt;1.1&lt;/mark&gt;
+      end
+&lt;/code&gt;&lt;/pre&gt;</code></pre></div>
+
+<div class="example">
+<p>Content related to exam is highlighted through mark and warnings are shown
+in strong.</p>
+<pre><code>&lt;h3&gt;Warmhole physics introduction&lt;/h3&gt;
+&lt;p&gt;&lt;mark&gt;A warmhole in normalcondition can be held open for maximum of
+just under 39 minutes.&lt;/mark&gt;Conditions that can increase the time including
+a powerful energy source.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning: The vortex caused by the warmhole opening
+will annihilate anything in its path.&lt;/p&gt;</code></pre></div>
+
+<!-- **************************mark element finished******************************** -->
+
+<h2>The <code>&lt;bdi&gt;</code> Element</h2>
+
+<p>The &lt;<dfn title="Bi-Directional Isolation">bdi</dfn>&gt; represents a block of text that is to be isolated
+from it's surroundings for the purposes of Bidirectional text formatting.</p>
+
+<p>The &quot;dir&quot;(direction) attribute defaults to auto on this element. (it never inherts from the
+parrent element like with other elements) </p>
+
+<p><strong>Example:</strong>Especially useful when embedding user generated content with an unkown directionality.
+If the <code>&lt;bdi&gt;</code> element is not used, the user name of Arabic user would end up confusing the text. (The
+bidirectional algorithm would put the colon and the number "3" next to the word "user" rather than next
+to the "posts".</p>
+
+<div class="example"> 
+<pre><code>&lt;ul&gt;
+&lt;li&gt;User&lt;bdi&gt;J cranmer&lt;/bdi&gt;:12 posts
+&lt;li&gt;User&lt;bdi&gt;hober&lt;/bdi&gt;:5posts
+&lt;li&gt;User&lt;bdi&gt;ڀاڼ&lt;/bdi&gt;:3posts</code></pre></div>
+
+<p>The output of above snippet of code would be a follows:</p>
+<pre><samp><ul><li>User J cranmer:12 posts</li>
+<li>User hober:5posts </li>
+<li>User <bdi dir="ltr">ڀاڼ</bdi>:5posts </li></samp></pre>
+
+<p>So in summary <code>&lt;bdi&gt;</code> isolates a part of text that might be formatted in a direction different from rest of the text. 
+It tells the browsers's bidirectional algorithm to treat the text it contains in isolation from its surrounding text.
+It is useful for embedding user generated content with an unknown directionality. We can also specify directionality using &quot;dir&quot;
+attribute with &quot;ltr&quot; or &quot;rtl&quot; value.</p>
+
+<!-- **************************bdi element finished******************************** -->
+
+<h2>The <code>&lt;bdo&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Bi-Directional Override">bdo</dfn>&gt; represents explicit text directionality formatting control of its children.</p>
+
+<p>It allows the authors to override the Unicode bidirectionality algorithm by explicitly specifying the direction override.</p>
+
+<p>Authors must specify &quot;dir&quot;(direction) attribute on this element with the values of 
+&quot;ltr&quot; and &quot;rtl&quot; for left to right override and right to left override respectively.
+&quot;auto&quot; value must not also be specified.</p>
+
+<pre><code>&lt;p&gt;This paragraph will go to left- to right&lt;/p&gt;
+&lt;p&gt;&lt;bdo dir=&quot;rtl&quot;&gt;This paragraph will go right to left&lt;/bdo&gt;&lt;/p&gt;</code></pre>
+
+<p>Output of the above snippet of code is given below.</p>
+
+<pre><samp>This paragraph would go right to left
+tfel ot thgir og dluow hpargarap shiT</samp></pre>
+
+<!-- **************************bdo element finished******************************** -->
+
+<h2>The <code>&lt;address&gt;</code> Element</h2>
+
+<p>The &lt;<dfn title="Address element">address</dfn>&gt; element represents contact information
+for a person, people or organisation.</p>
+
+<p>It should include physical and/or digital location, contact information and means of identifying 
+a person(s) or organisation the information pretains to.</p>
+
+<div class="example">
+<p>w3c twitter account</p>
+<pre><code>&lt;address&gt;&lt;p&gt;w3c on twitter:&lt;/p&gt;
+&lt;a href=&quot;http://twitter.com/w3c&quot;&gt;@w3c
+&lt;/a&gt;&lt;/address&gt;</code></pre></div>
+
+<p>Information about the organisation</p>
+
+<div class="example">
+<pre><code>&lt;address&gt;UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
+1701 Manor Road, Austin, Tx8722&lt;br&gt;
+Tel:(512) 471-58831 fax:(512)471-5908&lt;/address&gt;</code></pre></div>
+
+<!-- **************************address element finished******************************** -->
+
+<h2>The <code>&lt;br&gt;</code> Element</h2>
+
+<p>The &lt;<dfn title="Break-point element">br</dfn>&gt; element must be used only for line breaks
+that are actually part of the content, as in poems or addresses</p>
+
+<div class="example">
+<p>Use of <code>&lt;br&gt;</code> in poem</p>
+<pre><code>&lt;p&gt; 
+There's was once an example from finley&lt;br&gt;
+Whose markup was dubious quality&lt;br&gt;
+The validator complained&lt;br&gt;
+so the author was pained&lt;br&gt;
+&lt;/p&gt;</code></pre> </div>
+
+<p><code>&lt;br&gt;</code> element must not be used for separating thematic groups in paragraph</p>
+
+<!-- **************************br element finished******************************** -->
+
+<h2>The <code>&lt;span&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Span Element">span</dfn>&gt; doesn't mean anything on its own.
+But it can be useful when used together with Global attributes e.g. class, lang 
+or dir. So in an other words <code>&lt;span&gt;</code> represents it's children</p>
+
+<p>Example of <code>&lt;span&gt;</code> could be that code fragment is marked up using <span> and
+class attributes, so that its keywords and identifiers can be color coded in
+CSS.</p>
+
+<!-- **************************br element finished******************************** -->
+
+<h2>The <code>&lt;wbr&gt;</code> Element</h2>
+
+<p>The &lt;<dfn title="Word-Break-down element">wbr</dfn>&gt; represents a line break oppertunity.
+When a word is too long, or you are afraid that the browser will break your lines at the wrong
+places, you can use the &lt;wbr&gt; to add word break oppertunities.</p>
+
+<div class="example">
+<p>Someone quotation for effect is written without any space as a long word.</p>
+<pre><code>&lt;p&gt;So then he pointed at the tiger and screamed
+&quot;There &lt;wbr&gt;is&lt;wbr&gt;no&lt;wbr&gt;way&lt;wbr&gt;you&lt;wbr&gt;are
+&lt;wbr&gt;ever&lt;wbr&gt;going&lt;wbr&gt;to&lt;wbr&gt;eat&lt;wbr&gt;
+me&quot;!</code></pre></div>
+
+<p>The output of the above code is as shown below.</p>
+
+<p>So if you see the code in browser
+
+&quot;There<wbr>is<wbr>no<wbr>way<wbr>you<wbr>are<wbr>ever
+<wbr>going<wbr>to<wbr>eat<wbr>me&quot;.
+
+If you resize the window size into different smaller level. you would notice
+that the words are breaking into the other line or next line at
+the points where we have provided word break point oppertunities.</p>
+
+<p class="note">Especially long lines of code in a program listing can have suggested wrapping
+points using &lt;wbr&gt;element</p>
+
+<!-- **************************br element finished******************************** -->
+
+<h2>The <code>&lt;hr&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Horizontal-Row element">hr</dfn>&gt; represents a paragraph-level
+thematic break e.g. a scene change in a story, or a transition to another topic within
+a section of a refrence book.</p>
+
+<div class="example">
+<p>hr is used to separate topics within the section.</p>
+<pre><code>&lt;section&gt;&lt;h1&gt;Communication&lt;/h1&gt;
+&lt;p&gt;There are various method of communication.This section covers a few important 
+ones used by the project.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Communication stones seen to come in pairs and hence mysterious properties
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;li&gt;
+. . . . . .
+. . . . . .
+&lt;/ul&gt;
+&lt;hr&gt;</code></pre></div>
+
+<p class="note">There is no need for an <code>&lt;hr&gt;</code> element between the section themselves,
+since the <code>&lt;section&gt;</code> elements and <code>&lt;h1&gt;</code> elements imply the 
+thematic changes themselves.</p>
+
+<!-- **************************hr element finished******************************** -->
+
+<h2>The <code>&lt;pre&gt;</code> Element</h2>
+
+<p>&lt;<dfn title="Preformatted-text element">pre</dfn>&gt; represents a block of preformatted text,
+in which structure is represented by typographical conventions rather then by elements.</p>
+
+<p>Some of the examples where we can use <code>&lt;pre&gt;</code> are listed below</p>
+<ul>
+<li>Including an email with paragraphs indicated by blank lines, lists indicated by lines prefixed
+with a bullet and so on.
+</li>
+<li>Including fragment of computer code , with structure indicated according to conventions of 
+that language.
+</li>
+<li>Displaying ASCII art.</li>
+</ul>
+
+<p class="note">Authors are encouraged to consider how preformatted text will be experienced when the
+formatting is lost, as will be case for users of speech synthesizers, braille, displays
+and like wise.</p>
+
+<p>To present a block of computer code, the <code>&lt;pre&gt;</code> element, can be used 
+with a <code>&lt;code&gt;</code> element.</p>
+
+<p>To present a block of computer output the <code>&lt;pre&gt;</code> element can be 
+used with a <code>&lt;samp&gt;</code> elment</p>
+
+<p>Similarly the <code>&lt;kbd&gt;</code> element can be used with <code>&lt;pre&gt;</code> 
+element to indicate text that user is to enter</p>
+
+<!-- **************************pre element finished******************************** -->
+
+<h2>The <code>&lt;blockquote&gt;</code> </span>Element</h2>
+
+<p>&lt;<dfn title="Block-quote element">blockquote</dfn>&gt; represents the content that is qoted from another source , optionally with a 
+citation, which must be within the footer or cite element,and optionally with inline changes such as annotatins and abbreviations. 
+</p>
+
+<p>Content inside a blockquote other than citations and inline changes must be quoted from another source, 
+whose address if it has one, may be cited in the <code>&quot;cite&quot;</code> attribute.</p>
+
+<p class="note">The content of a <code>&lt;blockquote&gt;</code>element may be abbreviated, may have context 
+added or may have annotations.Any such additions, or changes to quoted text must be indicated in the text (at text level). 
+This may mean the use of notational convventions or explicit remarks.</p>
+
+<div class="example">
+<p>English abbreviations are traditionally identified using
+square brackets</p>
+<pre><code>&lt;blockquote&gt;
+&lt;p&gt;&#91;Fred&#93; then said he liked &#91;...&#93; fish.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre></div>
+
+<div class="example">
+<p>Quotation marks may be used to delineate between quoted text and 
+annotations within a <code>&lt;blockquote&gt;</code></p>
+<pre><code>&lt;figure&gt;
+&lt;blockquote&gt;
+&quot;Thats monster custom, who all sense doth eat of habits devil&quot;&lt;abbr 
+title=&quot;et cetra&quot;&gt;&amp;c.&lt;/abbr&gt;not in folio&quot;
+&lt;/blockquote&gt;
+&lt;footer&gt;&lt;cite &quot;title&quot;&gt;Shakespear manual &lt;/cite&gt;by&lt;cite 
+class=&quot;author&quot;&gt;Fredrick Grad&lt;/cite&gt;, p19(in Google books&gt;
+&lt;/footer&gt;
+&lt;/figure&gt;</code></pre></div>
+
+<p>In the above example, citation element is contained within the <code>&lt;footer&gt;</code> 
+of a <code>&lt;figure&gt;</code> element, this groups and associates the information about the 
+quote with the quote.</p>
+
+<div class="example">
+<pre><code>&lt;p&gt;His next piece was aptly named&lt;cite&gt; Sonnet130&lt;/cite&gt;&lt;/p&gt;
+&lt;blockquote cite=&quot;https://quotes.example.com&quot;&gt;
+&lt;p&gt;My misress eyes are nothing like sun&lt;br&gt;
+coral is far more red, then her lips, red&lt;br&gt;
+.....&lt;/p&gt;</code></pre></div>
+
+
+<!-- **************************blockquote element finished******************************** -->
+</section>
+<footer>
+<small>Created by khurram ©2022-2023. All right reserved.</small>
+</footer>
+</article>
+</body>
+</html>
