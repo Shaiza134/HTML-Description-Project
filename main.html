@@ -1,74 +1,86 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-<meta charset = "utf-8">
-<title>HTML Fundamentals</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Description Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav class='nav'>
-<div class='container'>
-<a href="/Lesson3.html" class='logo'><span id="logo-1-letter">K</span>hurram <span id="logo-1-letter">T</span>utorial
-<ul>
-<li><a href="#" class="active">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</div>
-</nav>
+    <nav class="nav">
+        <div class="container">
+            <a href="/index.html" class="logo"><span id="logo-1-letter">HTML</span>  <span id="logo-1-letter">T</span>utorial</a> </h1>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>           
+            </ul>
+        </div>
+    </nav>
 <article class="content">
 <section class="container content">
-<h1>Chapter 1: Introduction</h1>
 
-<p>In this page I would discuss briefly all the concepts related to different tags in <dfn = "Hyper Text Mark Up Language"><abbr>HTML 5</abbr></dfn> according to latest standard. We would understand how semantics are important to consider than the mere presentation of content on the page.</p>
-<ul> 
-<li>To learn semantics behind many HTML5 tags</li>
-<li>Separation of concern between content and presentation.</li>
-<li>Focus on structure, semantics , technical details of HTML5 and CSS3.</li>
-<li>To discuss things in developer perspective as oppose to designer perspective</li>
-</ul>
-<hr>
+    <h1>Chapter 1: Introduction</h1>
+
+    <p>In this page I would discuss briefly all the concepts related to different tags in HTML according to latest standard. We would understand how semantics are important to consider than the mere presentation of content on the page.</p>
+
+    <!-- The point here to remember is that list element should not be a part of paragraph -->
+    
+    <ul>
+    <li>To learn semantics behind many HTML5 tags</li>
+    <li>Separation of concern between content and presentation.</li>
+    <li>Focus on structure, semantics , technical details of HTML5 and CSS3.</li>
+    <li>To discuss things in developer perspective as oppose to designer perspective</li>
+    </ul>
+    </section>
+   <br>
+
+    <hr> 
+
+   <section class="container">
    
-<h1>Chapter 2: HTML 5 Tags Relating Paragraph and text</h1>
+    <h1>Chapter 2: HTML 5 Tags Relating Paragraph and text</h1>
 
-<p>Now  we would learn different<abbr> HTML5</abbr> tags one by one and mention
-  their technical details. </p> 
+    <p>Now  we would learn different<abbr>HTML5</abbr> tags one by one and mention
+    their technical details. </p>
     
-  <p>Note:This description of tags is taken from the latest HTML5 standard published
-    by w3c. To check it your self go to the following link.</p>
- <br>   
-  <a href="https://html.spec.whatwg.org/multipage/">Living Standard — Last Updated 17 June 2022</a>
-<br>
- <p> Lets start our discussion on different tags</p>
+    <p>Note:This description of tags is taken from the latest HTML5 standard published
+    by w3c. To check it your self go to the following link.<br>
+    <br>
+    <a href="https://html.spec.whatwg.org/multipage/">Living Standard — Last Updated 17 June 2022</a><br>
+    <br>
+    Lets start our discussion on different tags</p>
     
-<h2>The <code>&lt;html&gt;</code>Element</h2>
+    <h2>The <code>&lt;html&gt;</code> Element:</h2>
 
- <p>  It is a root of a Html document.html element should also specify lang attribute to aid speech synthesis tools etc.</p>
+<p>It is a root of a Html document.html element should also specify lang attribute to aid speech synthesis tools etc.</p>
 
 <!-- **************html element finished************* -->
 
 
-<h2>The <code>&lt;head&gt;</code>Element</h2>
+<h2>The <code>&lt;head&gt;</code> Element:</h2>
 
 <p><code>&lt;head&gt;</code> element represents collection of meta data.&lt;head &gt could be small or big depending upon the amount 
-the amount of metas such as <code>&lt;title &gt;</code>, <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>,<code> &lt;link &gt</code>, <code>&lt;meta name=&quot; &quot; 
-content=&quot; &quot;&gt;</code>.</p>
+the amount of metas such as &lt;title &gt;, &lt;meta charset=&quot;utf-8&quot;&gt;, &lt;link &gt, &lt;meta name=&quot; &quot; 
+content=&quot; &quot;&gt;.</p>
  
-<!--**************head element finished*************--> 
+<!-- **************head element finished************* -->
 
 
-<h2>The <code>&lt;title&gt;</code>Element</h2>
+<h2>The <code>&lt;title&gt;</code> Element:</h2>
   
 <p>Describes document title or name. &lt;title &gt;element identifies documents even if it's used out of context. It can be and 
-should be different from its first heading. There should be no more than one title element per page.</p>
+should be different from its first heading. There should be no more than one title element per page.</p>  
 
-<!--**************title element finished*************-->
+<!-- **************title element finished************* -->
 
-<h2>The <code>&lt;link&gt;</code>Element:</h2>
+<h2>The <code>&lt;link&gt;</code> Element:</h2>
 
 <p>link element links the page with external resource.&quot;href&quot; attribute specifies the destination of the link.It must be present and 
-valid URL.&quot;rel&quot; attribute specifies the relationship. In this case the relationship is that its a style sheet for this file. <code>&quot;rel&quot;</code> attribute should be a valid token
+valid URL.&quot;rel&quot; attribute specifies the relationship. In this case the relationship is that its a style sheet for this file. 
+&quot;rel&quot; attribute should be a valid token
 e.g. &quot;stylesheet&quot;. Type attribute gives a MIME type of a linked resource.</p>
 
 <div class="example">
@@ -76,7 +88,7 @@ e.g. &quot;stylesheet&quot;. Type attribute gives a MIME type of a linked resour
 media=&quot;screen&quot; &gt;</code></pre>
 </div>
 
-<!--**************link element finished*************--> 
+<!-- **************link element finished************* -->
 
 <h2>The <code>&lt;meta&gt;</code> Element:</h2>
 
@@ -91,7 +103,7 @@ There must be not than more than one meta element with a
 <p class="note">Restrictions on user scalability such as zooming in or out is not appreciated in Html5. For example 
 the statement  
 <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no&quot;&gt;</code></pre>
-is not used any more.Browsers allow user to zoom-in regardless of that restriction, so counterproductive in <abbr>HTML5</abbr>.</p>
+is not used any more.Browsers allow user to zoom-in regardless of that restriction, so counterproductive in HTML5.</p>
 
 <p>meta element sometime has name-value pairs. Where name describes aspect of metadata and content is actual
 value. eg.</p>
@@ -99,18 +111,17 @@ value. eg.</p>
 <pre><code>&lt;meta name=&quot;keywords&quot; content=&quot;HtML, CSS, XML, Javascript&quot;&gt;</code></pre>
 
 
-<!--**************meta element finished*************-->
+<!-- **************meta element finished************* -->
 
 <h2>The <code>&lt;style&gt;</code> Element:</h2>
 
 <p>It allows embed styling info into the documents. It is one of the several inputs to the styling processing model.</p>
-
 <p>Style doesn't represent content for use. &quot;type&quot; attribute shows internet media type also called MIME type of the &lt;style &gt;.
 If &quot;type&quot; attribute is not mentioned in style tag then the default value of type attribute used is &quot;text/css&quot;.
 charset parameter with the type should not be given. &quot;media&quot; attribute tells us what media/device the media resource is optimised
 for.</p>
 
-<p class="Note">Style should prefrebbly be used in the body of &lt;head&gt; element between opening and closing head tags. In the body it may cause 
+<p class="note">Style should prefrebbly be used in the body of &lt;head&gt; element between opening and closing head tags. In the body it may cause 
 unwanted restyling.</p>
 
 <div class="example">
@@ -129,9 +140,9 @@ h2{color:blue;}
 &lt;body&gt;.................. .   .  . &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>   
   
-<!--**************style element finished*************--> 
+<!-- **************style element finished************* -->
 
-<h2>Meaning of Paragraph! in  <abbr>HTML5</abbr> context:</h2>
+<h2>Meaning of Paragraph! in <abbr> HTML5 context:<abbr> </h2>
 
 <p>Typically a paragraph is run of phrasing content. It normally forms a block of text(with one or more sentences)
 .Paragraph discusses a particular topic. It is also used for general thematic grouping.&lt;a&gt;, &lt;ins&gt;, &lt;del&gt;
@@ -140,7 +151,7 @@ pragraph are more than just the definition of &lt;p&gt; element.</p>
 
 <!-- **************Paragraph finished***************** -->
 
-<h2>The <code>&lt;p&gt;</code> Element</h2>
+<h2>The <code>&lt;p&gt;</code> Element:</h2>
 
 <p>As mentioned before it is used for explicit wrapping of paragraph.For example</p>
 
@@ -175,37 +186,38 @@ so the author was pained&lt;br&gt;
 
 <p class="note">List elements(ol,ul) cannot be a children of <code>&lt;p&gt;</code> element. Take caution when sentence contain a bulleted list.</p>
 
-<!--**************p element finished*****************--> 
+<!-- **************p element finished***************** -->
 
 <h2>The <code>&lt;a&gt;</code> Element:</h2>
 
-<p><code>&lt;a&gt;</code>tag with &quot;href&quot; attribute represents hypertext anchor.Without "href" attribute it represents a placeholder.
+<p><code>&lt;a&gt;</code> tag with &quot;href&quot; attribute represents hypertext anchor.Without &quot;href&quot; attribute it represents a placeholder.
 We use anchor tag to create hyper link in our document.There are two main types of anchor tag.One which contain absolute URLs and
 the second with the relative URLs. Lets see the example of both below.</p>
 
 <h4>Absolute URL's:</h4>
-<pre><code>&lt;p&gt; &lt;a href=&quot;www.google.com&quot;&gtTo Google&lt;/a&gt;&lt;/p&gt; </code></pre>
+<pre><code>&lt;p&gt; &lt;a href=&quot;www.google.com&quot;&gtTo Google&lt;/a&gt;&lt;/p&gt; </code></pre></p>
 
 <h4>Relative URL's:</h4>
 <ul>
-<li><p>If the file is in the same folder:</p>
-<pre><code>&lt;p&gt;&lt;a href=&quot;a.gif&quot;&gtSame directory&lt;/a&gt;&lt;/p&gt;</code></pre></li></p>
-
-<li><p>If the file is in sub folder:</p>
+<li>If the file is in the same folder:
+<pre><code>&lt;p&gt;&lt;a href=&quot;a.gif&quot;&gtSame directory&lt;/a&gt;&lt;/p&gt;</code></pre></p>
+</li>
+<li>If the file is in sub folder:
 <pre><code>&lt;p&gt; &lt;a href=&quot;images/a.gif&quot;&gtTo the file in Subdirectory called images&lt;/a&gt;
-&lt;/p&gt;</code></pre></li>
-
-<li><p>If the file is in parrent folder:</p>
-<pre><code>&lt;p&gt; &lt;a href=&quot;../a.gif&quot;&gt;To the file in parrent directory&lt;/a&gt;&lt;/p&gt;</code></pre></li>
-
-<li><p>If the file is in images folder in parrent directory:</p>
+&lt;/p&gt;</code></pre></p>
+</li>
+<li>If the file is in parrent folder:
+<pre><code>&lt;p&gt; &lt;a href=&quot;../a.gif&quot;&gt;To the file in parrent directory&lt;/a&gt;&lt;/p&gt;</code></pre></p>
+</li>
+<li>If the file is in images folder in parrent directory:
 <pre><code>&lt;p&gt; &lt;a href=&quot;../images/a.gif&quot;&gt;To the file in parrent's directory image folder&lt;/a&gt;
-&lt;/p&gt;</code></pre></li>
-
-<li><p>If the file is in parent's parent directroy images folder:</p>
+&lt;/p&gt;</code>
+</pre></p></li>
+<li>If the file is in parent's parent directroy images folder:
 <pre><code>&lt;p&gt; &lt;a href=&quot;../../images/a.gif&quot;&gt;To the file in parrent's parrentdirectory 
-image folder&lt;/a&gt;&lt;/p&gt;</code></pre></li>
-</ul>
+image folder&lt;/a&gt;&lt;/p&gt;</code>
+</pre></li>
+</ul></p>
 
 <h3>Using target attribute</h3>
 <p>If you want browser to open a hyperlink in separate instance or window. You can use <b>target</b> attribute as fallows:</p>
@@ -258,7 +270,7 @@ This dungeon is dangerous
 <h2>The <code>&lt;em&gt;</code> Element:</h2>
 
 <p>Indicates stress emphasis of its content. level of stress could be increased through multiple nested 
-&lt;em&gt; elements. Placement of stress changes the meaning of the sentence.</p>
+<code>&lt;em&gt;</code>elements. Placement of stress changes the meaning of the sentence.</p>
 
 <div class="example">
 <pre><code>&lt;p&gt;Cats are cute animal&lt;/p&gt;<br>
@@ -267,8 +279,8 @@ In question the kind of animal unders discussion.
 &lt;p&gt;Cats&lt;em&gt;<mark> are</mark>&lt;/em&gt; cute animals.&lt;/p&gt; 
 Truth of the whole sentence in question.</code></pre></div>
 
-In similar way changing the place of stress emphasis of each word of the 
-sentence would change the meaning.
+<p>In similar way changing the place of stress emphasis of each word of the 
+sentence would change the meaning.</p>
 
 
 
@@ -276,14 +288,14 @@ sentence would change the meaning.
 
 <h2>The <code>&lt;small&gt;</code> Element:</h2>
 
-<p>&lt;small&gt; element represents side comments such as small print. It typically features disclaimmers,
+<p><code>&lt;small&gt;</code> element represents side comments such as small print. It typically features disclaimmers,
 caveats, legal restrictions, or copyrights(also normally used for copyright declaration of the web page in
 the footer).Also used for attribution, or satisfying licensing requirements.</p>
 
-<p class="Note">Do not use &lt;small&gt; to de-emphasize the &lt;em&gt;.
+<p class="note">Do not use <code>&lt;small&gt;</code> to de-emphasize the <code>&lt;em&gt;</code>.
 It should not be used for extended spans of text,only intended for short run of text.</p>
 
-<p class="Note">It's suitable for text of a page listing terms of use, in that case not a side comment,main content.It is
+<p class="note">It's suitable for text of a page listing terms of use, in that case not a side comment,main content.It is
 also different from the side bar, which might be multiple paragraph removed from the main flow of the text</p>
 
 <div class="example">
@@ -295,7 +307,7 @@ also different from the side bar, which might be multiple paragraph removed from
 <h2>The <code>&lt;s&gt;</code> Element:</h2>
 
 <p>&lt;<dfn title="Strike through element">s</dfn>&gt; element designates a content as being no longer accurate or relevant.
-&lt;s&gt; is not appropriate for document edit,&lt;del&gt; should be used for text being removed.</p>
+<code>&lt;s&gt;</code> is not appropriate for document edit,&lt;del&gt; should be used for text being removed.</p>
 
 <div class="example">
 <pre><code>&lt;p&gt;Buy our Iced Tea and Lemonade.&lt;/p&gt;
@@ -359,7 +371,7 @@ WHATWG<strong>s</strong>&lt;/abbr&gt;</code></pre>
 
 <!-- **************abbr element finished***************** -->
 
-<h2>The <code>&lt;dfn&gt;</code> Element:</h2>
+<h2>The &lt;dfn&gt; Element:</h2>
 
 <p>The &lt;<dfn title="Defination element">dfn</dfn>&gt; element represents (first) defining instance of a term. 
 The term description(<code>&lt;p&gt;</code>,<code>&lt;li&gt;</code>,<code>&lt;section&gt;</code>) that is nearest 
@@ -592,20 +604,21 @@ element, it represents an actual key or other single unit of input.</p>
 
 <h2>The <code>&lt;b&gt;</code> Element</h2>
 
-<p>&lt;b&gt; represents a span of text to which attention is drawn
+<p>&lt;<dfn title="Bold element">b</dfn>&gt; represents a span of text to which attention is drawn
 for utilitarian purposes</p>
+
 <ol>
 <li>without conveying any extra information</li>
 <li>no implication or alternative voice or mood</li>
 </ol>
+
 <p>Such as keywords in document abstract, product names in a review, actionable words in interactive
 text-driven software or an article lede.</p>
 
-<p class="note">
-In other words in html5 the use of &lt;b&gt; and &lt;i&gt; is
+<p class="note">In other words in html5 the use of &lt;b&gt; and <code>&lt;i&gt;</code> is
 very limited. If you are confused, you need to remember that more often than not it would be better
-to use &lt;strong&gt; and &lt;em&gt; instead of &lt;b&gt; and 
-&lt;i&gt; elements  respectively.</p>
+to use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> instead of <code>&lt;b&gt;</code> and 
+<code>&lt;i&gt;</code> elements  respectively.</p>
 
 <p>Lets see the example of the use of <code>&lt;b&gt;</code> element below</p>
 
@@ -619,7 +632,7 @@ components are fired.&lt;/p&gt;</code></pre></div>
 
 <h2>The <code>&lt;i&gt;</code> Element</h2>
 
-<p>&lt;i&gt; represents a span of text in alternative voice or mood.Or otherwise
+<p>&lt;<dfn title="Italic element">i</dfn>&gt; represents a span of text in alternative voice or mood.Or otherwise
 offset from the normal prose in a manner indicating a different quality of text, such as taxonomical designations, a
 technical term, and idiomatic phrase from another language, transliteration, a thought, or a ship name in Western 
 texts.</p>
@@ -641,39 +654,38 @@ texts.</p>
 
 <h2>The <code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> Element</h2>
 
-<p><code>&lt;sub&gt;</code> represents subscript and &lt;sup
-&gt; represents superscript. The element must be used only to markup typographical conventions with specific meaning, not for typographical presentation for presentation sake. For example it would be inappropriate to for the &lt;sub&gt; and &lt;sup&gt; elements to be used in name of "Lafex" document prepration system.</p>
+<p>&lt;<dfn title="Subscript element">sub</dfn>&gt; represents subscript and &lt;<dfn title="Superscript element">sup</dfn>
+&gt; represents superscript. The element must be used only to markup typographical conventions with specific meaning, not for typographical
+presentation for presentation sake. For example it would be inappropriate to for the <code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> e
+lements to be used in name of "Lafex" document prepration system.</p>
 
 <p>In general these elements should only be used if the absence of these elements would change the meaning of the content.</p>
 
-<p class="note">
-In some languages superscripts are part of the typographical conventions for some abbreviations.</p>
+<p class="note">In some languages superscripts are part of the typographical conventions for some abbreviations.</p>
 
 <div class="example">
 <pre><code>&lt;p&gt;The most beautiful women are &lt;span lang=&quot;fr&quot;&gt;&lt;abbr&gt;M&lt;sup&gt;me&lt;/sup&gt;
 &lt;/abbr&gt;Revise&lt;/span&gt;&lt;/p&gt; </code></pre></div>
 
-<p class="note">
-The <code>&lt;sub&gt;</code> element can be used inside a <code>&lt;var&gt;</code> element, 
+<p class="note">The <code>&lt;sub&gt;</code> element can be used inside a <code>&lt;var&gt;</code> element, 
 for variables that have subscripts</p>
 
 <!-- **************sub and sup elements finished***************** -->
 
-<h2>The &lt;u&gt; Element</h2>
+<h2>The <code>&lt;u&gt;</code> Element</h2>
 
 <p>The &lt;<dfn title="Underline element">u</dfn>&gt; represents a span of text with an unarticulated though
 explicitly rendered non-textual <strong>annotation</strong>. Such as labeling the text as being proper name in
 chinese text (a chinese proper name mark) or labeling the text as being misspelt.</p>
 
-<p class="note">
-In most cases other elements are likely to be more appropriate. In HTML5 it as very 
+<p class="note">In most cases other elements are likely to be more appropriate. In HTML5 it as very 
 limited and specific use</p>
 
 <pre><code>&lt;p&gt;This is a &lt;u&gt;parragraph&lt;/u&gt;&lt;p&gt;</code></pre>
 
 <p>Ouput of the above code is as fallows</p>
 
-Output:This is a parragraph
+<pre><samp>Output:This is a <u>parragraph</u></samp></pre>
 
 <!-- **************************u element finished******************************** -->
 
@@ -682,8 +694,7 @@ Output:This is a parragraph
 <p>The &lt;<dfn title="Mark element">mark</dfn>&gt; represents a run of text in one document marked or highlighted 
 for reference purposes, due to its relevance in another context.</p>
 
-<p class="note">
-When used in quotation or block of text referred to from the prose , it indicates a highlight that was not
+<p class="note">When used in quotation or block of text referred to from the prose , it indicates a highlight that was not
 orginally present but which has been added to bring the reader attention to a part of text that might not have been
 considered important by the orginal author.Think of this like using a highlighter pen in book to mark passages
 that you find of interest and which orginal author didn't put special attention through marking it himself.</p>
@@ -691,21 +702,22 @@ that you find of interest and which orginal author didn't put special attention 
 <p>When used in main prose of a document it indicates a part of the document that has highlighted due to its
 likely reference to user's current activity.</p>
 
-<p>so in simple terms we use <code>&lt;mark&gt;</code> element for two main situations. One for text or passage of text which we find special fascination and want to draw particular interest of reader to it and secondly for indicating the portion of the documents content which is likely to be more relevant with user's current activity.</p>
+<p>so in simple terms we use <code>&lt;mark&gt;</code> element for two main situations. One for text or passage of text which we
+find special fascination and want to draw particular interest of reader to it and secondly for indicating the portion
+of the documents content which is likely to be more relevant with user's current activity.</p>
 
 <div class="example">
 <p>Bringing attention of the user to particular part of quotation.</p>
 <pre><code>&lt;p lang=&quot;en-US&quot;&gt;Consider the following quote.&lt;/p&gt;
 &lt;blockquote lang=&quot;en-GB&quot;&gt;
 &lt;p&gt;Look arround and you will find, no-ones really &lt;mark&gt;colour&lt;/mark&gt;
-blind&lt;/p&gt;</code></pre>
-</div>
+blind&lt;/p&gt;</code></pre></div>
+
 <div class="example">
 <p>Highlighting parts of document that are matching some search string.</p>
 <pre><code>&lt;p&gt; I think, they like my garden! May be i should adopt a 
-&lt;mark&gt;kitten&lt;/mark&gt;&lt;/p&gt;
-</code></pre>
-</div>
+&lt;mark&gt;kitten&lt;/mark&gt;&lt;/p&gt;</code></pre></div>
+
 <div class="example">
 <p>Paragraph of text referring to specific part of the code fragment.</p>
 <pre><code>&lt;p&gt;The highlighted part is where the error lies:&lt;/p&gt;
@@ -735,7 +747,7 @@ from it's surroundings for the purposes of Bidirectional text formatting.</p>
 <p>The &quot;dir&quot;(direction) attribute defaults to auto on this element. (it never inherts from the
 parrent element like with other elements) </p>
 
-<p><strong>Example:</strong>Especially useful when embedding user generated content with an unkown directionality.
+<p>Example:Especially useful when embedding user generated content with an unkown directionality.
 If the <code>&lt;bdi&gt;</code> element is not used, the user name of Arabic user would end up confusing the text. (The
 bidirectional algorithm would put the colon and the number "3" next to the word "user" rather than next
 to the "posts".</p>
@@ -760,9 +772,8 @@ attribute with &quot;ltr&quot; or &quot;rtl&quot; value.</p>
 
 <h2>The <code>&lt;bdo&gt;</code> Element</h2>
 
-<p>&lt;<dfn title="Bi-Directional Override">bdo</dfn>&gt; represents explicit text directionality formatting control of its children.</p>
-
-<p>It allows the authors to override the Unicode bidirectionality algorithm by explicitly specifying the direction override.</p>
+<p>&lt;<dfn title="Bi-Directional Override">bdo</dfn>&gt; represents explicit text directionality formatting control of its children.
+It allows the authors to override the Unicode bidirectionality algorithm by explicitly specifying the direction override</p>
 
 <p>Authors must specify &quot;dir&quot;(direction) attribute on this element with the values of 
 &quot;ltr&quot; and &quot;rtl&quot; for left to right override and right to left override respectively.
@@ -965,10 +976,12 @@ coral is far more red, then her lips, red&lt;br&gt;
 
 
 <!-- **************************blockquote element finished******************************** -->
-</section>
-<footer>
-<small>Created by khurram ©2022-2023. All right reserved.</small>
-</footer>
+
+   </section> 
+   <footer class="container"><small>Created by Shaiza ©2022-2023. All right reserved.</small> 
+   </footer>
+
 </article>
+
 </body>
 </html>
